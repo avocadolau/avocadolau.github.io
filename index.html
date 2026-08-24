@@ -1,31 +1,199 @@
 <!DOCTYPE HTML>
-<!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
-		<title>Laura Isidro Gomez</title>
+		<title>Laura</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<link rel="stylesheet" href="assets/css/retro-theme.css">
 	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
+	<body>
+
+		<!-- Nav -->
+		<nav class="nav-arcade">
+			<div class="wrap">
+      			<div class="logo">LAURA ISIDRO GOMEZ</div>
+				<ul>
+					<li><a href="#" class="active">Home</a></li>
+					<li><a href="#projects">Projects</a></li>
+					<li><a href="#about">About me</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+    		</div>
+		</nav>
+
+		<!-- Presentation -->
+		<section class="hero">
+			<div class="wrap">
+			<span class="eyebrow">PLAYER ONE</span>
+			<h1>Videogame Developer</h1>
+			<p class="lead">
+				I create playable prototypes, custom engines, and interactive experiences.
+				Expore my projects below — each one is a different world.
+			</p>
+			<div class="cta-row">
+				<a href="#proyectos" class="btn-arcade primary">View Projects</a>
+				<a href="#contacto" class="btn-arcade">Contact</a>
+			</div>
+			</div>
+		</section>
+
+		<section id="projects">
+			<div class="wrap">
+			<span class="eyebrow">SELECT YOUR STAGE</span>
+			<h2>Projects</h2>
+
+			<div class="stage-tabs" role="tablist" aria-label="Filtrar proyectos">
+				<button class="stage-tab is-active" role="tab" aria-selected="true" data-filter="professional">PROFESSIONAL</button>
+				<button class="stage-tab" role="tab" aria-selected="false" data-filter="personal">PERSONAL</button>
+			</div>
+
+			<div class="project-grid">
+
+				<a class="project-card" data-category="professional" href="Projects/RomaEterna.html">
+					<div class="thumb"></div>
+					<div class="body">
+						<h3>Roma Eterna</h3>
+						<p>Pixelart Tower Defense</p>
+						<div class="tags"><span>Unity</span><span>Technical Artist</span></div>
+					</div>
+				</a>
+
+				<a class="project-card" data-category="professional" href="Projects/AlteredAlma.html">
+				<div class="thumb"></div>
+				<div class="body">
+					<h3>Altered Alma</h3>
+					<p>Pixelart Metroidvania</p>
+					<div class="tags"><span>Unity</span><span>Technical Artist</span><span>Environment Art</span></div>
+				</div>
+				</a>
+
+				<a class="project-card" data-category="personal" href="https://github.com/avocadolau/TanksOnline" target = "_blank">
+				<div class="thumb"></div>
+				<div class="body">
+					<h3>Tanks</h3>
+					<p>Online multiplayer game with authentication</p>
+					<div class="tags"><span>Unity</span><span>PlayFab</span><span>C#</span></div>
+				</div>
+				</a>
+
+				<a class="project-card" data-category="personal" href="https://github.com/avocadolau/UOC-Engine" target = "_blank">
+				<div class="thumb"></div>
+				<div class="body">
+					<h3>UOC Engine</h3>
+					<p>Custom 3D game engine</p>
+					<div class="tags"><span>DirectX</span><span>C++</span></div>
+				</div>
+				</a>
+
+				<a class="project-card" data-category="personal" href="https://github.com/avocadolau/LannaEngine/releases/tag/v0.3" target = "_blank">
+				<div class="thumb"></div>
+				<div class="body">
+					<h3>Lanna Engine</h3>
+					<p>Custom 3D game engine</p>
+					<div class="tags"><span>OpenGL</span><span>C++</span></div>
+				</div>
+				</a>
+
+				<a class="project-card" data-category="personal" href="https://github.com/allenbateman/SuperFantastics" target = "_blank">
+				<div class="thumb"></div>
+				<div class="body">
+					<h3>Mega Bomberman</h3>
+					<p>Game tribute to Mega Bomberman 94'</p>
+					<div class="tags"><span>SDL</span><span>C++</span></div>
+				</div>
+				</a>
+
+				<a class="project-card" data-category="personal" href="https://github.com/PixelPlaygroundStudio/GOTG_Reupload" target = "_blank">
+				<div class="thumb"></div>
+				<div class="body">
+					<h3>Guardians of the Galaxy</h3>
+					<p>Top-down shooter</p>
+					<div class="tags"><span>Own Game Engine</span><span>Art Lead</span></div>
+				</div>
+				</a>
+
+				<a class="project-card" data-category="personal" href="https://www.youtube.com/watch?v=6gdtW2fhqFk" target = "_blank">
+				<div class="thumb"></div>
+				<div class="body">
+					<h3>Walter's Wonderland</h3>
+					<p>Metroidvania Demo</p>
+					<div class="tags"><span>Unity</span><span>Programmer</span><span>Environment Art</span></div>
+				</div>
+				</a>
+
+			</div>
+			</div>
+		</section>
+
+		<section id="about">
+			<div class="wrap">
+			<span class="eyebrow">CONTINUE?</span>
+			<h2>About Me</h2>
+			<p style="max-width: 60ch;">
+				Aquí va tu historia: cómo empezaste en el desarrollo de juegos, qué herramientas dominas
+				y qué tipo de proyectos te gustaría crear a continuación. Mantenlo breve y personal —
+				dos o tres frases bastan.
+			</p>
+			</div>
+		</section>
+
+		<section id="contact">
+			<div class="wrap text-center">
+			<span class="eyebrow">GAME OVER? INSERT COIN</span>
+			<h2>Let's Talk</h2>
+			<div class="cta-row" style="justify-content:center;">
+				<a href="mailto:tu@email.com" class="btn-arcade primary">Text Me</a>
+				<a href="#" class="btn-arcade">LinkedIn</a>
+				<a href="cv.html" class="btn-arcade">CV</a>
+			</div>
+			</div>
+		</section>
+
+		<footer class="footer-arcade">
+			<div class="wrap">
+			© 2026 Laura Isidro Gomez — done with <a href="#">HTML &amp; CSS</a>
+			</div>
+		</footer>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+			var tabs = document.querySelectorAll('.stage-tab');
+			var cards = document.querySelectorAll('.project-card');
+
+			function setFilter(filter) {
+				cards.forEach(function (card) {
+				var show = card.dataset.category === filter;
+				card.classList.toggle('is-hidden', !show);
+				});
+				tabs.forEach(function (tab) {
+				var active = tab.dataset.filter === filter;
+				tab.classList.toggle('is-active', active);
+				tab.setAttribute('aria-selected', active ? 'true' : 'false');
+				});
+			}
+
+			tabs.forEach(function (tab) {
+				tab.addEventListener('click', function () {
+				setFilter(tab.dataset.filter);
+				});
+			});
+
+			// Estado inicial: muestra "professional" al cargar la página
+			setFilter('professional');
+			});
+		</script>
+<!--
 			<div id="wrapper">
 
-				<!-- Header -->
 					<header id="header">
 						<div class="inner">
 
-							<!-- Logo -->
 								<a href="index.html" class="logo">
 									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Laura Isidro Gómez</span>
 								</a>
 
-							<!-- Nav -->
+	
 								<nav>
 									<ul>
 										<li><a href="#menu">Menu</a></li>
@@ -35,7 +203,7 @@
 						</div>
 					</header>
 
-				<!-- Menu -->
+
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
@@ -44,9 +212,9 @@
 						</ul>
 					</nav>
 
-				<!-- Main --> 
+
 					<div id="main">
-					<!-- Game Developer -->
+
 						<div class="inner">
 							<header>
 								<h1>Game Developer</a></h1>
@@ -138,7 +306,7 @@
 
 							</section>
 						</div>
-					<!-- Game Artist -->
+
 						<div class="inner">
 							<p></p>
 							<header>
@@ -196,7 +364,7 @@
 						</div>
 					</div>
 
-				<!-- Footer -->
+
 					<footer id="footer">
 						<div class="inner">
 							<section>
@@ -215,12 +383,10 @@
 
 			</div>
 
-		<!-- Scripts -->
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
+-->
