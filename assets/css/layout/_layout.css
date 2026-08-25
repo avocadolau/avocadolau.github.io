@@ -1,0 +1,26 @@
+/* =====================================================================
+   LAYOUT / CONTENEDORES
+   ===================================================================== */
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-3);
+}
+
+section { padding: var(--space-5) 0; position: relative; }
+
+/* divisor tipo "línea de escaneo" entre secciones */
+section + section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--grid-line) 20%, var(--grid-line) 80%, transparent);
+}
+
+.cv-columns {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-4);
+}

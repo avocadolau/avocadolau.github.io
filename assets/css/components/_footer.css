@@ -1,0 +1,12 @@
+/* =====================================================================
+   FOOTER
+   ===================================================================== */
+
+.footer-arcade {
+  border-top: 1px solid var(--grid-line);
+  padding: var(--space-3) 0;
+  font-size: 0.7rem;
+  color: var(--dim-lavender);
+  text-align: center;
+}
+.footer-arcade a:hover { color: var(--electric-violet); }

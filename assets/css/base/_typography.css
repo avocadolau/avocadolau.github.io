@@ -1,0 +1,41 @@
+/* =====================================================================
+   TIPOGRAFÍA
+   ===================================================================== */
+
+h1, h2, h3, .eyebrow, .btn-arcade {
+  font-family: var(--font-display);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  line-height: 1.5;
+  color: var(--phosphor-white);
+  text-shadow: var(--glow-purple);
+}
+
+h2 {
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem);
+  line-height: 1.6;
+  color: var(--electric-violet);
+  margin-bottom: var(--space-3);
+}
+
+h3 {
+  font-size: 0.85rem;
+  color: var(--phosphor-white);
+  margin-bottom: var(--space-2);
+}
+
+p, li { color: var(--dim-lavender); }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.65rem;
+  color: var(--arcade-purple);
+  margin-bottom: var(--space-2);
+  letter-spacing: 0.15em;
+}
+
+.eyebrow::before { content: '// '; color: var(--grid-line); }

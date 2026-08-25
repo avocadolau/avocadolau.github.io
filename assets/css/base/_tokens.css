@@ -1,0 +1,35 @@
+/* =====================================================================
+   TOKENS — colores, tipografía, espaciado
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  /* Color */
+  --void-black:       #0a0810;   /* fondo principal, negro con base violeta */
+  --panel-charcoal:   #16121f;   /* tarjetas, paneles, nav */
+  --panel-charcoal-2: #1e1830;   /* paneles elevados / hover */
+  --grid-line:        #2a2140;   /* bordes, divisores */
+  --arcade-purple:    #9d4edd;   /* acento primario */
+  --electric-violet:  #c77dff;   /* acento secundario, glow, hover */
+  --phosphor-white:   #f1edf7;   /* texto principal */
+  --dim-lavender:     #8f87a6;   /* texto secundario / muted */
+  --alert-magenta:    #ff2e88;   /* uso puntual: etiquetas "nuevo", errores, highlights */
+
+  /* Tipografía */
+  --font-display: 'Press Start 2P', monospace;   /* solo títulos cortos / eyebrows */
+  --font-body:    'Space Mono', monospace;       /* cuerpo de texto, nav, botones */
+
+  /* Layout */
+  --radius: 2px;                 /* casi sin redondeo: estética de pixel */
+  --pixel-cut: 10px;             /* tamaño del corte de esquina "cartucho" */
+  --max-width: 1120px;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+
+  --glow-purple: 0 0 6px rgba(157, 78, 221, 0.7), 0 0 18px rgba(157, 78, 221, 0.35);
+  --glow-violet-soft: 0 0 12px rgba(199, 125, 255, 0.35);
+}

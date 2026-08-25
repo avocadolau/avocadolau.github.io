@@ -630,10 +630,6 @@ a:focus-visible, button:focus-visible, .btn-arcade:focus-visible {
         gap: var(--space-2);
     }
 
-    .contribution-grid {
-        gap: var(--space-2);
-    }
-
 }
 
 @media (max-width: 720px) {
@@ -720,7 +716,14 @@ a:focus-visible, button:focus-visible, .btn-arcade:focus-visible {
     color: var(--alert-magenta);
     text-shadow: 0 0 8px rgba(255, 46, 136, 0.45);
 }
+@media (max-width: 640px) {
 
+    .contribution-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2);
+    }
+
+}
 
 /* ---------------------------------------------------------------------
    FULL WIDTH IMAGE

@@ -1,0 +1,83 @@
+/* =====================================================================
+   HERO
+   ===================================================================== */
+
+.hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 1px solid var(--grid-line);
+}
+.hero p.lead {
+  max-width: 46ch;
+  font-size: 1rem;
+  color: var(--dim-lavender);
+  margin-top: var(--space-2);
+}
+.hero .cta-row {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+  flex-wrap: wrap;
+}
+
+/* ---------------------------------------------------------------------
+   HERO CON IMAGEN (páginas de proyecto individual)
+   --------------------------------------------------------------------- */
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+.hero-layout .project-image {
+  margin: 0;
+  background: var(--panel-charcoal);
+  border: 1px solid var(--grid-line);
+  clip-path: polygon(
+    0 var(--pixel-cut), var(--pixel-cut) 0,
+    100% 0, 100% calc(100% - var(--pixel-cut)),
+    calc(100% - var(--pixel-cut)) 100%, 0 100%
+  );
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--glow-purple);
+}
+
+.hero-layout .project-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(15%) contrast(1.05);
+  transition: transform 0.3s ease, filter 0.25s ease;
+}
+
+.hero-layout .project-image:hover img {
+  transform: scale(1.03);
+  filter: grayscale(0%) contrast(1.1);
+}
+
+.hero-content { max-width: 520px; }
+.hero-content h1 { margin-top: var(--space-2); margin-bottom: var(--space-2); }
+.hero-content .hero-lead { margin-top: var(--space-3); }
+
+/* Lead reutilizable fuera del hero de la home (ej. en páginas de proyecto) */
+.hero-lead {
+  max-width: 55ch;
+  margin-top: var(--space-3);
+}
+
+@media (max-width: 720px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+  .hero-layout .project-image { order: 1; }
+  .hero-content { order: 2; }
+  .hero-layout .project-image img { min-height: auto; }
+}

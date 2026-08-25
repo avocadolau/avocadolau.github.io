@@ -1,0 +1,40 @@
+/* =====================================================================
+   NAV
+   ===================================================================== */
+
+.nav-arcade {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 8, 16, 0.85);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--grid-line);
+}
+.nav-arcade .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+}
+.nav-arcade .logo {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  color: var(--electric-violet);
+}
+.nav-arcade ul {
+  display: flex;
+  gap: var(--space-3);
+  list-style: none;
+  margin: 0; padding: 0;
+  font-size: 0.8rem;
+}
+.nav-arcade a {
+  color: var(--dim-lavender);
+  transition: color 0.15s ease;
+}
+.nav-arcade a:hover,
+.nav-arcade a.active {
+  color: var(--electric-violet);
+  text-shadow: var(--glow-violet-soft);
+}

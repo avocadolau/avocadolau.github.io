@@ -1,0 +1,18 @@
+/* =====================================================================
+   IMPRESIÓN / EXPORTAR A PDF
+   Simplifica el tema para que el CV se pueda imprimir o guardar
+   como PDF sin fondos negros ni efectos que gasten tinta.
+   ===================================================================== */
+
+@media print {
+  body::before, body::after { display: none; }
+  body { background: #ffffff; color: #1a1a1a; }
+  .nav-arcade, .footer-arcade, .btn-arcade.print-hide { display: none; }
+  h1, h2 { text-shadow: none; color: #1a1a1a; }
+  h2 { color: #4b1e8f; }
+  p, li { color: #333; }
+  .cv-entry::before { background: #4b1e8f; box-shadow: none; }
+  .cv-entry { border-left-color: #ccc; }
+  .skill-bar .fill { background: #4b1e8f; box-shadow: none; }
+  section + section::before { display: none; }
+}

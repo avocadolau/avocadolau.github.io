@@ -1,0 +1,47 @@
+/* =====================================================================
+   CV — línea de tiempo tipo "quest log" + barras de habilidad
+   ===================================================================== */
+
+.cv-entry {
+  border-left: 2px solid var(--grid-line);
+  padding-left: var(--space-3);
+  padding-bottom: var(--space-4);
+  position: relative;
+}
+.cv-entry::before {
+  content: '';
+  position: absolute;
+  left: -7px; top: 4px;
+  width: 12px; height: 12px;
+  background: var(--arcade-purple);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  box-shadow: var(--glow-purple);
+}
+.cv-entry:last-child { border-left-color: transparent; padding-bottom: 0; }
+.cv-entry .meta {
+  font-size: 0.7rem;
+  color: var(--arcade-purple);
+  margin-bottom: var(--space-2);
+  font-family: var(--font-body);
+}
+.cv-entry ul { margin: var(--space-1) 0 0; padding-left: 1.1rem; }
+.cv-entry li { margin-bottom: 4px; }
+
+.skill-bar { margin-bottom: var(--space-2); max-width: 420px; }
+.skill-bar .label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  margin-bottom: 4px;
+  color: var(--phosphor-white);
+}
+.skill-bar .track {
+  height: 8px;
+  background: var(--panel-charcoal-2);
+  border: 1px solid var(--grid-line);
+}
+.skill-bar .fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--arcade-purple), var(--electric-violet));
+  box-shadow: var(--glow-violet-soft);
+}
