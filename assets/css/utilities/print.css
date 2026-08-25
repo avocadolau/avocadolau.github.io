@@ -1,7 +1,5 @@
 /* =====================================================================
-   IMPRESIÓN / EXPORTAR A PDF
-   Simplifica el tema para que el CV se pueda imprimir o guardar
-   como PDF sin fondos negros ni efectos que gasten tinta.
+   PRINTING / EXPORT PDF
    ===================================================================== */
 
 @media print {

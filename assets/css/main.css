@@ -1,13 +1,3 @@
-/* =====================================================================
-   RETRO ARCADE THEME — negro/gris oscuro + morado
-   Para avocadolau.github.io
-   Concepto: pantalla de selección de personaje / cabina arcade CRT.
-
-   Este archivo solo importa los módulos, en el orden en que deben
-   cargarse. Es el ÚNICO archivo que debes enlazar desde tu HTML:
-   <link rel="stylesheet" href="css/main.css">
-   ===================================================================== */
-
 /* Base */
 @import url('base/tokens.css');
 @import url('base/reset.css');
