@@ -9,28 +9,28 @@
    ===================================================================== */
 
 /* Base */
-@import url('base/_tokens.css');
-@import url('base/_reset.css');
-@import url('base/_typography.css');
+@import url('base/tokens.css');
+@import url('base/reset.css');
+@import url('base/typography.css');
 
 /* Effects */
-@import url('effects/_crt.css');
+@import url('effects/crt.css');
 
 /* Layout */
-@import url('layout/_layout.css');
+@import url('layout/layout.css');
 
 /* Componente */
-@import url('components/_nav.css');
-@import url('components/_hero.css');
-@import url('components/_project-page.css');
-@import url('components/_buttons.css');
-@import url('components/_tabs.css');
-@import url('components/_cards.css');
-@import url('components/_footer.css');
-@import url('components/_cv.css');
-@import url('components/_image.css');
+@import url('components/nav.css');
+@import url('components/hero.css');
+@import url('components/project-page.css');
+@import url('components/buttons.css');
+@import url('components/tabs.css');
+@import url('components/cards.css');
+@import url('components/footer.css');
+@import url('components/cv.css');
+@import url('components/image.css');
 
 /* utilities and overrides */
-@import url('utilities/_utilities.css');
-@import url('utilities/_print.css');
-@import url('utilities/_responsive.css');
+@import url('utilities/utilities.css');
+@import url('utilities/print.css');
+@import url('utilities/responsive.css');
