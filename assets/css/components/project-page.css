@@ -1,6 +1,90 @@
-/* =====================================================================
-   PROJECT PAGE — meta, gallery, description, contributions
-   ===================================================================== */
+/* ---------------------------------------------------------------------
+   project header
+   --------------------------------------------------------------------- */
+.project-header {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--grid-line);
+}
+
+.project-header p.lead {
+    max-width: 46ch;
+    font-size: 1rem;
+    color: var(--dim-lavender);
+    margin-top: var(--space-2);
+}
+
+.project-header .cta-row {
+    display: flex;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+    flex-wrap: wrap;
+}
+
+/* project header image */
+.project-header-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: var(--space-5);
+    align-items: center;
+}
+
+.project-header-layout .project-image {
+    margin: 0;
+    background: var(--panel-charcoal);
+    border: 1px solid var(--grid-line);
+
+    clip-path: polygon(
+        0 var(--pixel-cut),
+        var(--pixel-cut) 0,
+        100% 0,
+        100% calc(100% - var(--pixel-cut)),
+        calc(100% - var(--pixel-cut)) 100%,
+        0 100%
+    );
+
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--glow-purple);
+}
+
+.project-header-layout .project-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    object-fit: cover;
+    display: block;
+
+    filter: grayscale(15%) contrast(1.05);
+
+    transition:
+        transform 0.3s ease,
+        filter 0.25s ease;
+}
+
+
+/* project header content */
+
+.project-header-content {
+    max-width: 520px;
+}
+
+.project-header-content h1 {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+.project-header-content .project-header-lead {
+    margin-top: var(--space-3);
+}
+
+.project-header-lead {
+    max-width: 55ch;
+    margin-top: var(--space-3);
+}
+
 
 /* ---------------------------------------------------------------------
    META (role, year, technologies...)
@@ -59,6 +143,16 @@
   text-shadow: 0 0 8px rgba(255, 46, 136, 0.45);
 }
 
+/* Icono opcional */
+.contribution-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2rem;
+    color: var(--alert-magenta);
+}
+
 /* ---------------------------------------------------------------------
    RESPONSIVE
    --------------------------------------------------------------------- */
@@ -69,4 +163,21 @@
 @media (max-width: 720px) {
   .contribution-grid { grid-template-columns: 1fr; }
   .project-meta { flex-direction: column; gap: var(--space-1); }
+
+  .project-header-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+
+    .project-header-layout .project-image {
+        order: 1;
+    }
+
+    .project-header-content {
+        order: 2;
+    }
+
+    .project-header-layout .project-image img {
+        min-height: auto;
+    }
 }

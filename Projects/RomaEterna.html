@@ -5,47 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Roma Eterna</title>
+    <link rel="icon" type="image/png" href="../media/Website/avatar_pixel.png">
 
-    <link rel="stylesheet" href="../assets/css/retro-theme.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- =========================================================
-         NAVIGATION
-         ========================================================= -->
-
-    <header class="nav-arcade">
-        <div class="wrap">
-
-            <a href="../index.html" class="logo">
-                HOME
-            </a>
-
-            <nav aria-label="Main navigation">
-                <ul>
-                    <li><a href="#init">Init</a></li>
-                    <li><a href="#overview">Overview</a></li>
-					<li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#network">Network</a></li>
-                </ul>
-            </nav>
-
-        </div>
-    </header>
-
-
-    <!-- =========================================================
-         MAIN
-         ========================================================= -->
-
     <main>
 
-        <!-- HERO / PROJECT HEADER -->
+        <!-- project header -->
         <section id="init" class="hero">
             <div class="wrap hero-layout">
 
-				<!-- LEFT: IMAGE -->
+				<!-- L image -->
 				<figure class="project-image">
 					<img
 						src="../media/RomaEterna/VestaLogo.png"
@@ -53,7 +27,7 @@
 					>
 				</figure>
 
-				<!-- RIGHT: PROJECT INFO -->
+				<!-- R project info -->
 				<div class="hero-content">
 
 					<span class="eyebrow">IN DEVELOPMENT</span>
@@ -80,10 +54,7 @@
 			 </div>
         </section>
 
-        <!-- =====================================================
-             PROJECT DESCRIPTION
-             ===================================================== -->
-
+        <!-- project description -->
         <section>
             <div id="overview" class="wrap">
 
@@ -103,40 +74,18 @@
         </section>
 
 
+    </main>
 
-    <!-- =========================================================
-         FOOTER
-         ========================================================= -->
+    <!-- footer -->
+    <footer id="site-footer" class="footer-arcade"></footer>
 
-    <footer class="footer-arcade">
-        <div class="wrap">
-
-            <p>
-                LAURA ISIDRO GÓMEZ - GAME DEVELOPER
-            </p>
-
-            <p>
-                <a
-                    href="https://www.linkedin.com/in/laura-isidro-590930180/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    LINKEDIN
-                </a>
-
-                &nbsp;//&nbsp;
-
-                <a
-                    href="https://github.com/avocadolau"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    GITHUB
-                </a>
-            </p>
-
-        </div>
-    </footer>
 
 </body>
+
+<script src="../assets/js/components.js"></script>
+<script>
+    loadProjectNav();
+    loadFooter();
+</script>
+
 </html>

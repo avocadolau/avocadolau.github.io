@@ -3,35 +3,93 @@
    ===================================================================== */
 
 .btn-arcade {
-  display: inline-block;
-  font-size: 0.7rem;
-  padding: var(--space-2) var(--space-3);
-  background: var(--panel-charcoal);
-  border: 1px solid var(--arcade-purple);
-  color: var(--electric-violet);
-  clip-path: polygon(
-    0 6px, 6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%
-  );
-  transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
-  cursor: pointer;
-}
-.btn-arcade:hover {
-  background: var(--panel-charcoal-2);
-  box-shadow: var(--glow-purple);
-  transform: translateY(-1px);
-}
-.btn-arcade.primary {
-  background: var(--arcade-purple);
-  color: var(--void-black);
-  border-color: var(--arcade-purple);
-}
-.btn-arcade.primary:hover { background: var(--electric-violet); }
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
-/* BUTTON ROW OUTSIDE HERO */
+    font-size: 0.7rem;
+    padding: var(--space-2) var(--space-3);
+
+    background: var(--panel-charcoal);
+    border: 1px solid var(--arcade-purple);
+    color: var(--electric-violet);
+
+    clip-path: polygon(
+        0 6px,
+        6px 0,
+        100% 0,
+        100% calc(100% - 6px),
+        calc(100% - 6px) 100%,
+        0 100%
+    );
+
+    transition:
+        background 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.1s ease;
+
+    cursor: pointer;
+}
+
+.btn-arcade:hover {
+    background: var(--panel-charcoal-2);
+    box-shadow: var(--glow-purple);
+    transform: translateY(-1px);
+}
+
+.btn-arcade.primary {
+    background: var(--arcade-purple);
+    color: var(--void-black);
+    border-color: var(--arcade-purple);
+}
+
+.btn-arcade.primary:hover {
+    background: var(--electric-violet);
+}
+
+
+/* ---------------------------------------------------------------------
+   BUTTON ICON + TEXT
+   --------------------------------------------------------------------- */
+
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn-icon i {
+    font-size: 1.8em;
+    flex-shrink: 0;
+}
+
+
+/* ---------------------------------------------------------------------
+   BUTTON ICON ONLY
+   --------------------------------------------------------------------- */
+
+.btn-icon-only {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 2.6em;
+    padding: var(--space-2);
+}
+
+.btn-icon-only i {
+    font-size: 0.85em;
+}
+
+
+/* ---------------------------------------------------------------------
+   BUTTON ROW
+   --------------------------------------------------------------------- */
+
 .cta-row {
-  display: flex;
-  justify-content: center;
-  gap: var(--space-2);
-  flex-wrap: wrap;
-  margin-top: var(--space-3);
+    display: flex;
+    justify-content: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    margin-top: var(--space-3);
 }

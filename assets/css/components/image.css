@@ -1,56 +1,102 @@
-/* =====================================================================
-   IMAGES DISPLAY
-   ===================================================================== */
+/* icon */
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    font-size: 1em;
+    flex-shrink: 0;
+}
+/* icon only 
+btn-icon fa-solid fa-globe
+btn-icon fa-solid fa-arrow-up-right-from-square
+btn-icon fa-solid fa-download
+btn-icon fa-solid fa-envelope
+btn-icon fa-solid fa-gamepad
 
+btn-icon fa-brands fa-github
+btn-icon fa-brands fa-linkedin
+btn-icon fa-brands fa-steam
+btn-icon fa-brands fa-itch-io
 
-/* ---------------------------------------------------------------------
-   IMAGE GALLERY
-   --------------------------------------------------------------------- */
+<i class="fa-solid fa-gamepad"></i>
+<i class="fa-solid fa-ghost"></i>
+<i class="fa-solid fa-rocket"></i>
+<i class="fa-solid fa-shuttle-space"></i>
+*/
+
+/* IMAGES */
 .project-gallery {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-3);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
 }
 
 .project-image {
-  margin: 0;
-  background: var(--panel-charcoal);
-  border: 1px solid var(--grid-line);
-  clip-path: polygon(
-    0 var(--pixel-cut), var(--pixel-cut) 0,
-    100% 0, 100% calc(100% - var(--pixel-cut)),
-    calc(100% - var(--pixel-cut)) 100%, 0 100%
-  );
-  overflow: hidden;
-  position: relative;
-}
+    margin: 0;
+    background: var(--panel-charcoal);
+    border: 1px solid var(--grid-line);
 
-.project-image::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: linear-gradient(135deg, rgba(157, 78, 221, 0.08), transparent 45%);
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
+    clip-path: polygon(
+        0 var(--pixel-cut),
+        var(--pixel-cut) 0,
+        100% 0,
+        100% calc(100% - var(--pixel-cut)),
+        calc(100% - var(--pixel-cut)) 100%,
+        0 100%
+    );
 
-.project-image:hover {
-  border-color: var(--arcade-purple);
-  box-shadow: var(--glow-purple);
+    overflow: hidden;
+    position: relative;
 }
-.project-image:hover::after { opacity: 1; }
 
 .project-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: grayscale(15%) contrast(1.05);
-  transition: filter 0.25s ease, transform 0.3s ease;
+    width: 100%;
+    height: auto;
+    display: block;
 }
-.project-image:hover img {
-  filter: grayscale(0%) contrast(1.1);
-  transform: scale(1.025);
+
+
+/* animated image */
+
+.project-image--animated::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background: linear-gradient(
+        135deg,
+        rgba(157, 78, 221, 0.08),
+        transparent 45%
+    );
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.project-image--animated {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-image--animated:hover {
+    border-color: var(--arcade-purple);
+    box-shadow: var(--glow-purple);
+}
+
+.project-image--animated:hover::after {
+    opacity: 1;
+}
+
+.project-image--animated img {
+    filter: grayscale(15%) contrast(1.05);
+    transition: filter 0.25s ease, transform 0.3s ease;
+}
+
+.project-image--animated:hover img {
+    filter: grayscale(0%) contrast(1.1);
+    transform: scale(1.025);
 }
 
 /* ---------------------------------------------------------------------

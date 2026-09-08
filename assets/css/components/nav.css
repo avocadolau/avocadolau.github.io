@@ -38,3 +38,30 @@
   color: var(--electric-violet);
   text-shadow: var(--glow-violet-soft);
 }
+
+
+
+
+.nav-home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.nav-home img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+
+.nav-home .logo {
+    transform: translateY(2px);
+}
+
+.nav-home.vertical {
+    flex-direction: column;
+    gap: 4px;
+}

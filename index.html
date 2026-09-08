@@ -2,28 +2,57 @@
 
 <html>
 	<head>
-		<title>Laura</title>
+		<title>Laura | Videogame Developer</title>
+		<link rel="icon" type="image/png" href="media/Website/avatar_pixel.png">
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
 		<link rel="stylesheet" href="assets/css/main.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 	</head>
 	<body>
+		<!-- script index from components.js -->
 
-		<!-- Nav -->
-		<nav class="nav-arcade">
-			<div class="wrap">
-				<!--
-      			<div class="logo">HOME</div>
-				-->
-				<a href="#" class="logo">HOME</a>
+		<!-- Presentation -->
+		<section class="hero">
+			<div class="wrap hero-layout">
 
-				<ul>
-					<li><a href="#projects">Projects</a></li>
-					<li><a href="#about">About me</a></li>
-					<li><a href="#contact">Contact</a></li>
-				</ul>
-    		</div>
-		</nav>
+				<!-- Imagen -->
+				<div class="hero-image-card">
+
+					<figure class="hero-image">
+						 <img
+						 src="media/Website/avatar_pixel.png"
+						 alt="Pixel art avatar of Laura"
+						 >
+					</figure> 
+				</div>
+
+				<!-- Texto -->
+				<div class="hero-content">
+					<span class="eyebrow">PLAYER &gt; LAURA</span>
+
+					<h1>Videogame Developer</h1>
+
+					<p class="hero-lead">
+						I create playable prototypes, custom engines, and interactive
+						experiences. Explore my projects below, each one is a different world.
+					</p>
+
+					<!-- Opcional -->
+					
+					<div class="cta-row">
+						<a href="#projects" class="btn-arcade primary">
+							VIEW PROJECTS
+						</a>
+						<a href="#contact" class="btn-arcade">
+							CONTACT
+						</a>
+					</div>
+					
+				</div>
+
+			</div>
+		</section>
 
 		<!-- Presentation -->
 		<section class="hero">
@@ -191,26 +220,17 @@
 			<h2>Let's Talk</h2>
 			<div class="cta-row" style="justify-content:center;">
 				<a href="https://www.linkedin.com/in/tu-usuario" target="_blank" rel="noopener" class="btn-arcade btn-icon">
-					<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
-						<path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/>
-					</svg>
+					<i class="btn-icon fa-brands fa-linkedin"></i>
 				</a>
-				<a href="cv.html" class="btn-arcade">CV</a>
 				<a href="mailto:lauraisi2000@gmail.com" class="btn-arcade btn-icon">
-					<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
-						<path d="M2 5.5A2.5 2.5 0 0 1 4.5 3h15A2.5 2.5 0 0 1 22 5.5v13a2.5 2.5 0 0 1-2.5 2.5h-15A2.5 2.5 0 0 1 2 18.5v-13zm2.2.3 7.14 5.4a1 1 0 0 0 1.2 0l7.14-5.4A.5.5 0 0 0 19.3 5H4.7a.5.5 0 0 0-.5.8zM20 7.7l-6.9 5.22a3 3 0 0 1-3.6 0L4 7.7V18.5c0 .28.22.5.5.5h15a.5.5 0 0 0 .5-.5V7.7z"/>
-					</svg>
+					<i class="btn-icon fa-solid fa-envelope"></i>
 					Contact
 				</a>
 			</div>
 			</div>
 		</section>
-
-		<footer class="footer-arcade">
-			<div class="wrap">
-			© 2026 Laura Isidro Gomez — done with <a href="#">HTML &amp; CSS</a>
-			</div>
-		</footer>
+		
+		<footer id="site-footer" class="footer-arcade"></footer>
 
 		<script>
 			document.addEventListener('DOMContentLoaded', function () {
@@ -238,6 +258,12 @@
 			// Estado inicial: muestra "professional" al cargar la página
 			setFilter('professional');
 			});
+		</script>
+
+		<script src="assets/js/components.js"></script>
+		<script>
+			loadNav();
+			loadFooter();
 		</script>
 	</body>
 </html>
