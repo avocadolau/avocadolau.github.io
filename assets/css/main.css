@@ -19,6 +19,7 @@
 @import url('components/footer.css');
 @import url('components/cv.css');
 @import url('components/image.css');
+@import url('components/linktree.css');
 
 /* utilities and overrides */
 @import url('utilities/utilities.css');

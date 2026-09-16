@@ -9,7 +9,7 @@ function loadNav() {
       			<div class="logo">HOME</div>
 				-->
 				<a href="index.html" class="nav-home">
-					<img src="media/Website/avatar_pixel_purple.png" alt="">
+					<img src="media/Website/avatar_32_purple.png" alt="">
 					<span class="logo">HOME</span>
 				</a>
 
@@ -36,7 +36,7 @@ function loadProjectNav() {
             <div class="wrap">
 
                 <a href="../index.html" class="nav-home">
-					<img src="../media/Website/avatar_pixel_purple.png" alt="">
+					<img src="../media/Website/avatar_32.png" alt="">
 					<span class="logo">HOME</span>
 				</a>
 

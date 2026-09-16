@@ -39,9 +39,6 @@
   text-shadow: var(--glow-violet-soft);
 }
 
-
-
-
 .nav-home {
     display: flex;
     flex-direction: row;
@@ -51,8 +48,8 @@
 }
 
 .nav-home img {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     object-fit: contain;
     image-rendering: pixelated;
 }
