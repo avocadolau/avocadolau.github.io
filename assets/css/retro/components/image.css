@@ -1,0 +1,315 @@
+/* icon */
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    font-size: 1em;
+    flex-shrink: 0;
+}
+/* icon only 
+btn-icon fa-solid fa-globe
+btn-icon fa-solid fa-arrow-up-right-from-square
+btn-icon fa-solid fa-download
+btn-icon fa-solid fa-envelope
+btn-icon fa-solid fa-gamepad
+
+btn-icon fa-brands fa-github
+btn-icon fa-brands fa-linkedin
+btn-icon fa-brands fa-steam
+btn-icon fa-brands fa-itch-io
+
+<i class="fa-solid fa-gamepad"></i>
+<i class="fa-solid fa-ghost"></i>
+<i class="fa-solid fa-rocket"></i>
+<i class="fa-solid fa-shuttle-space"></i>
+*/
+
+/* IMAGES */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
+}
+
+.project-image {
+    margin: 0;
+    background: var(--panel-charcoal);
+    border: 1px solid var(--grid-line);
+
+    clip-path: polygon(
+        0 var(--pixel-cut),
+        var(--pixel-cut) 0,
+        100% 0,
+        100% calc(100% - var(--pixel-cut)),
+        calc(100% - var(--pixel-cut)) 100%,
+        0 100%
+    );
+
+    overflow: hidden;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* animated image */
+
+.project-image--animated::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+
+    background: linear-gradient(
+        135deg,
+        rgba(157, 78, 221, 0.08),
+        transparent 45%
+    );
+
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.project-image--animated {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-image--animated:hover {
+    border-color: var(--arcade-purple);
+    box-shadow: var(--glow-purple);
+}
+
+.project-image--animated:hover::after {
+    opacity: 1;
+}
+
+.project-image--animated img {
+    filter: grayscale(15%) contrast(1.05);
+    transition: filter 0.25s ease, transform 0.3s ease;
+}
+
+.project-image--animated:hover img {
+    filter: grayscale(0%) contrast(1.1);
+    transform: scale(1.025);
+}
+
+/* ---------------------------------------------------------------------
+   IMAGE CARROUSEL
+   --------------------------------------------------------------------- */
+.image-carousel {
+    position: relative;
+    width: 100%;
+
+    background: var(--panel-charcoal);
+    border: 1px solid var(--grid-line);
+
+    clip-path: polygon(
+        0 var(--pixel-cut),
+        var(--pixel-cut) 0,
+        100% 0,
+        100% calc(100% - var(--pixel-cut)),
+        calc(100% - var(--pixel-cut)) 100%,
+        0 100%
+    );
+
+    overflow: hidden;
+}
+
+/* main image */
+.image-carousel .carousel-image {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    filter: grayscale(15%) contrast(1.05);
+
+    transition:
+        opacity 0.2s ease,
+        filter 0.25s ease,
+        transform 0.3s ease;
+}
+
+/* fixed ratio */
+.image-carousel.is-fixed .carousel-image {
+    aspect-ratio: 16 / 10;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-carousel:hover .carousel-image {
+    filter: grayscale(0%) contrast(1.1);
+}
+
+/* purple overlay */
+.image-carousel::after {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(157, 78, 221, 0.08),
+            transparent 45%
+        );
+
+    z-index: 1;
+}
+
+/* arrow buttons */
+.carousel-arrow {
+    position: absolute;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    z-index: 3;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    background: rgba(10, 8, 16, 0.85);
+    color: var(--electric-violet);
+
+    border: 1px solid var(--arcade-purple);
+
+    font-family: var(--font-display);
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    clip-path: polygon(
+        0 6px,
+        6px 0,
+        100% 0,
+        100% calc(100% - 6px),
+        calc(100% - 6px) 100%,
+        0 100%
+    );
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        box-shadow 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+/* left */
+.carousel-arrow.prev {
+    left: var(--space-2);
+}
+
+/* right */
+.carousel-arrow.next {
+    right: var(--space-2);
+}
+
+/* arrow hover */
+.carousel-arrow:hover {
+    background: var(--arcade-purple);
+    color: var(--void-black);
+
+    box-shadow: var(--glow-purple);
+
+    transform: translateY(-50%) scale(1.05);
+}
+
+/* focus*/
+.carousel-arrow:focus-visible {
+    outline: 2px solid var(--electric-violet);
+    outline-offset: 3px;
+}
+
+/* image counter */
+.carousel-counter {
+    position: absolute;
+
+    right: var(--space-2);
+    bottom: var(--space-2);
+
+    z-index: 3;
+
+    padding: 4px 8px;
+
+    background: rgba(10, 8, 16, 0.85);
+
+    border: 1px solid var(--grid-line);
+
+    color: var(--electric-violet);
+
+    font-family: var(--font-display);
+    font-size: 0.5rem;
+
+    letter-spacing: 0.05em;
+}
+
+
+
+/* ---------------------------------------------------------------------
+   FULL WIDTH IMAGE
+   --------------------------------------------------------------------- */
+.full-image {
+  margin: 0;
+  background: var(--panel-charcoal);
+  border: 1px solid var(--grid-line);
+  padding: 4px;
+  clip-path: polygon(
+    0 var(--pixel-cut), var(--pixel-cut) 0,
+    100% 0, 100% calc(100% - var(--pixel-cut)),
+    calc(100% - var(--pixel-cut)) 100%, 0 100%
+  );
+  overflow: hidden;
+}
+.full-image img { width: 100%; height: auto; display: block; }
+
+
+/* ---------------------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .project-gallery { gap: var(--space-2); }
+}
+
+@media (max-width: 720px) {
+  .project-gallery { grid-template-columns: 1fr; }
+}
+
+/* mobile carousel */
+
+@media (max-width: 640px) {
+
+    .image-carousel.is-fixed .carousel-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .carousel-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 0.8rem;
+    }
+
+    .carousel-arrow.prev {
+        left: var(--space-1);
+    }
+
+    .carousel-arrow.next {
+        right: var(--space-1);
+    }
+
+}

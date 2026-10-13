@@ -1,0 +1,183 @@
+/* ---------------------------------------------------------------------
+   project header
+   --------------------------------------------------------------------- */
+.project-header {
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid var(--grid-line);
+}
+
+.project-header p.lead {
+    max-width: 46ch;
+    font-size: 1rem;
+    color: var(--dim-lavender);
+    margin-top: var(--space-2);
+}
+
+.project-header .cta-row {
+    display: flex;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+    flex-wrap: wrap;
+}
+
+/* project header image */
+.project-header-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: var(--space-5);
+    align-items: center;
+}
+
+.project-header-layout .project-image {
+    margin: 0;
+    background: var(--panel-charcoal);
+    border: 1px solid var(--grid-line);
+
+    clip-path: polygon(
+        0 var(--pixel-cut),
+        var(--pixel-cut) 0,
+        100% 0,
+        100% calc(100% - var(--pixel-cut)),
+        calc(100% - var(--pixel-cut)) 100%,
+        0 100%
+    );
+
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--glow-purple);
+}
+
+.project-header-layout .project-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    object-fit: cover;
+    display: block;
+
+    filter: grayscale(15%) contrast(1.05);
+
+    transition:
+        transform 0.3s ease,
+        filter 0.25s ease;
+}
+
+
+/* project header content */
+
+.project-header-content {
+    max-width: 520px;
+}
+
+.project-header-content h1 {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+.project-header-content .project-header-lead {
+    margin-top: var(--space-3);
+}
+
+.project-header-lead {
+    max-width: 55ch;
+    margin-top: var(--space-3);
+}
+
+
+/* ---------------------------------------------------------------------
+   META (role, year, technologies...)
+   --------------------------------------------------------------------- */
+.project-meta {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-2);
+  font-size: 0.7rem;
+}
+.project-meta p {
+  margin: 0;
+  color: var(--arcade-purple);
+}
+.project-meta strong {
+  color: var(--electric-violet);
+  font-weight: 700;
+}
+
+/* ---------------------------------------------------------------------
+   DESCRIPTION
+   --------------------------------------------------------------------- */
+.project-description { max-width: 75ch; }
+.project-description p { margin-bottom: var(--space-3); }
+
+/* ---------------------------------------------------------------------
+   CONTRIBUTIONS GRID
+   --------------------------------------------------------------------- */
+.contribution-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.contribution-card {
+  position: relative;
+  background: var(--panel-charcoal);
+  border: 1px solid var(--grid-line);
+  padding: var(--space-3);
+  clip-path: polygon(0 8px, 8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+.contribution-card:hover {
+  border-color: var(--arcade-purple);
+  box-shadow: var(--glow-purple);
+  transform: translateY(-2px);
+}
+.contribution-card h3 { margin-top: var(--space-2); }
+.contribution-card p { margin: 0; font-size: 0.85rem; }
+
+.contribution-number {
+  font-family: var(--font-display);
+  font-size: 0.55rem;
+  color: var(--alert-magenta);
+  text-shadow: 0 0 8px rgba(255, 46, 136, 0.45);
+}
+
+/* Icono opcional */
+.contribution-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.2rem;
+    color: var(--alert-magenta);
+}
+
+/* ---------------------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  .contribution-grid { grid-template-columns: 1fr; gap: var(--space-2); }
+}
+
+@media (max-width: 720px) {
+  .contribution-grid { grid-template-columns: 1fr; }
+  .project-meta { flex-direction: column; gap: var(--space-1); }
+
+  .project-header-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+
+    .project-header-layout .project-image {
+        order: 1;
+    }
+
+    .project-header-content {
+        order: 2;
+    }
+
+    .project-header-layout .project-image img {
+        min-height: auto;
+    }
+}

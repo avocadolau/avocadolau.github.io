@@ -1,0 +1,29 @@
+/* Base */
+@import url('arcade90s/base/tokens.css');
+@import url('arcade90s/base/reset.css');
+@import url('arcade90s/base/typography.css');
+
+/* Effects */
+@import url('arcade90s/effects/crt.css');
+
+/* Layout */
+@import url('arcade90s/layout/layout.css');
+
+/* Componente */
+@import url('arcade90s/components/nav.css');
+@import url('arcade90s/components/hero.css');
+@import url('arcade90s/components/project-page.css');
+@import url('arcade90s/components/buttons.css');
+@import url('arcade90s/components/tabs.css');
+@import url('arcade90s/components/cards.css');
+@import url('arcade90s/components/footer.css');
+@import url('arcade90s/components/cv.css');
+@import url('arcade90s/components/image.css');
+@import url('arcade90s/components/linktree.css');
+
+/* utilities and overrides */
+@import url('arcade90s/utilities/utilities.css');
+@import url('arcade90s/utilities/print.css');
+@import url('arcade90s/utilities/responsive.css');
+
+@import url('arcade90s/theme.css');

@@ -1,0 +1,130 @@
+/* =====================================================================
+   HERO
+   ===================================================================== */
+
+.hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--grid-line);
+}
+
+.hero-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-5);
+    align-items: center;
+}
+
+/* ---------------------------------------------------------------------
+   IMAGE
+   --------------------------------------------------------------------- */
+
+
+.hero-layout .hero-image-card {
+    height: 100%;
+    position: relative;
+    background: var(--panel-charcoal);
+    border: 1px solid var(--grid-line);
+    padding: var(--space-3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-color: var(--arcade-purple);
+
+    clip-path: polygon(
+        0 16px,
+        16px 0,
+        100% 0,
+        100% calc(100% - 16px),
+        calc(100% - 16px) 100%,
+        0 100%
+    );
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.hero-layout .hero-image-card:hover {
+    border-color: var(--arcade-purple);
+    box-shadow: var(--glow-purple);
+    /* transform: translateY(-2px); */
+}
+
+
+/* Image */
+
+.hero-layout .hero-image {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-layout .hero-image img {
+    width: 100%;
+    height: auto;
+    max-height: 360px;
+    display: block;
+    object-fit: contain;
+    image-rendering: pixelated;
+}
+/* ---------------------------------------------------------------------
+   CONTENT
+   --------------------------------------------------------------------- */
+
+.hero-content {
+    max-width: 520px;
+}
+
+.hero-content h1 {
+    margin-top: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+.hero-lead {
+    max-width: 55ch;
+    margin-top: var(--space-3);
+    color: var(--dim-lavender);
+}
+
+/* ---------------------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+
+    .hero-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+
+    .hero-layout .hero-image-card {
+        width: 100%;
+        padding: var(--space-2);
+        transform: none;
+    }
+
+    .hero-layout .hero-image-card:hover {
+        transform: none;
+    }
+
+    .hero-layout .hero-image {
+        order: 1;
+    }
+
+    .hero-layout .hero-image img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+}

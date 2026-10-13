@@ -1,0 +1,25 @@
+/* ARCADE 90s — palette and type scale */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+:root {
+  --void-black: #100d1b;
+  --panel-charcoal: #201a31;
+  --panel-charcoal-2: #2b2340;
+  --grid-line: #55456d;
+  --arcade-purple: #ff4fb8;
+  --electric-violet: #56e8ed;
+  --phosphor-white: #f7f1ff;
+  --dim-lavender: #b8adc9;
+  --alert-magenta: #d5f36a;
+  --font-display: 'Press Start 2P', monospace;
+  --font-body: 'Space Mono', monospace;
+  --radius: 0;
+  --pixel-cut: 0;
+  --max-width: 1120px;
+  --space-1: .5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --glow-purple: 4px 4px 0 rgba(255,79,184,.34);
+  --glow-violet-soft: 0 0 14px rgba(86,232,237,.3);
+}

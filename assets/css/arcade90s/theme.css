@@ -1,0 +1,37 @@
+/* Arcade 90s overrides inspired by maqueta-arcade-90s.html */
+body {
+  background: var(--void-black);
+  background-image: radial-gradient(ellipse at 12% 25%, rgba(86,232,237,.07), transparent 38%),
+                    radial-gradient(ellipse at 88% 58%, rgba(255,79,184,.06), transparent 42%);
+}
+.nav-arcade { background: rgba(16,13,27,.95); border-bottom-color: var(--grid-line); }
+.nav-arcade .logo, .nav-arcade a:hover, .nav-arcade a.active { color: var(--electric-violet); }
+h1 { text-shadow: 4px 4px 0 rgba(255,79,184,.45); }
+h2 { color: var(--electric-violet); }
+.eyebrow { color: var(--electric-violet); }
+.eyebrow::before { color: var(--arcade-purple); }
+.btn-arcade, .stage-tab {
+  clip-path: none;
+  border: 2px solid var(--electric-violet);
+  box-shadow: 4px 4px 0 rgba(85,69,109,.65);
+}
+.btn-arcade { min-height: 48px; }
+.btn-arcade:hover { background: var(--panel-charcoal-2); color: var(--arcade-purple); border-color: var(--arcade-purple); box-shadow: 2px 2px 0 var(--arcade-purple); transform: translate(2px,2px); }
+.btn-arcade.primary, .stage-tab.is-active { background: var(--electric-violet); border-color: var(--electric-violet); color: var(--void-black); box-shadow: 4px 4px 0 rgba(255,79,184,.4); }
+.btn-arcade.primary:hover { background: var(--arcade-purple); border-color: var(--arcade-purple); }
+.stage-tab { color: var(--dim-lavender); }
+.stage-tab:hover { color: var(--arcade-purple); border-color: var(--arcade-purple); }
+.stage-tab.is-active { color: var(--void-black); }
+.project-card, .contribution-card, .hero-layout .hero-image-card, .full-image {
+  clip-path: none;
+  border-color: var(--grid-line);
+  box-shadow: none;
+}
+.project-card:hover, .contribution-card:hover { border-color: var(--electric-violet); box-shadow: 5px 5px 0 rgba(255,79,184,.34); transform: translateY(-4px); }
+.project-card .thumb img { filter: saturate(.82) contrast(1.04); }
+.project-card:hover .thumb img { filter: saturate(1.1) contrast(1.06); }
+.project-card .tags span { color: var(--electric-violet); border-color: var(--grid-line); }
+.hero-layout .hero-image-card { border: 2px solid var(--electric-violet); box-shadow: 8px 8px 0 var(--arcade-purple); }
+.hero-layout .hero-image-card:hover { box-shadow: 8px 8px 0 var(--arcade-purple), 0 0 28px rgba(86,232,237,.2); }
+.footer-arcade a:hover { color: var(--arcade-purple); }
+.nav-arcade a:focus-visible, .btn-arcade:focus-visible, .stage-tab:focus-visible { outline: 2px solid var(--alert-magenta); outline-offset: 3px; }
