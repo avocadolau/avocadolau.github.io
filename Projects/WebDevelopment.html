@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Web development by Laura Isidro: website design, development and database work for Asociación Almas Bellas.">
+    <title>Web Development | Laura Isidro</title>
+    <link rel="icon" type="image/png" href="../media/Website/avatar_32.png">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        .web-window { border: 2px solid var(--grid-line); background: var(--panel-charcoal); box-shadow: var(--glow-purple); min-width: 0; }
+        .window-bar { display: flex; gap: .5rem; padding: 1rem; border-bottom: 2px solid var(--grid-line); }
+        .window-dot { width: .6rem; height: .6rem; background: var(--arcade-purple); }
+        .window-dot:nth-child(2) { background: var(--electric-violet); }
+        .window-dot:nth-child(3) { background: var(--alert-magenta); }
+        .code-symbol { display: grid; place-items: center; min-height: 280px; padding: 2rem; color: var(--electric-violet); font-size: clamp(3rem, 8vw, 5rem); line-height: 1.4; }
+    </style>
+</head>
+<body>
+    <header class="nav-arcade">
+        <div class="wrap">
+            <a href="../index.html" class="nav-home">
+                <img src="../media/Website/avatar_32.png" alt="">
+                <span class="logo">HOME</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                    <li><a href="../index.html#about">About me</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section id="init" class="project-header">
+            <div class="wrap project-header-layout">
+                <div class="web-window" aria-hidden="true">
+                    <div class="window-bar"><span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span></div>
+                    <div class="code-symbol">&lt;/&gt;</div>
+                </div>
+                <div class="project-header-content">
+                    <span class="eyebrow">PROFESSIONAL PROJECTS</span>
+                    <h1>WEB DEVELOPMENT</h1>
+                </div>
+            </div>
+        </section>
+        <section id="contributions">
+            <div class="wrap">
+                <span class="eyebrow">SYSTEM ROLE</span>
+                <h2>CAPABILITIES</h2>
+                <div class="contribution-grid">
+                    <article class="contribution-card">
+                        <i class="contribution-icon fa-solid fa-pen-ruler" aria-hidden="true"></i>
+                        <h3>WEB DESIGN</h3>
+                    </article>
+                    <article class="contribution-card">
+                        <i class="contribution-icon fa-solid fa-code" aria-hidden="true"></i>
+                        <h3>WEB DEVELOPMENT</h3>
+                    </article>
+                    <article class="contribution-card">
+                        <i class="contribution-icon fa-solid fa-database" aria-hidden="true"></i>
+                        <h3>DATABASE</h3>
+                    </article>
+                    <article class="contribution-card">
+                        <i class="contribution-icon fa-solid fa-user-lock" aria-hidden="true"></i>
+                        <h3>AUTHENTICATION</h3>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="overview">
+            <div class="wrap">
+                <span class="eyebrow">MISSION LOG</span>
+                <h2>WEB PROJECTS</h2>
+                <div class="web-project-list">
+                    <!-- Add each new website as another cv-entry inside this list. -->
+                    <article class="cv-entry">
+                        <h3>Asociación Almas Bellas</h3>
+                        <div class="meta">Web design · Development · Database</div>
+                        <p>Website for Asociación Almas Bellas, an animal rescue association.</p>
+                        <ul>
+                            <li>Visual design and page layouts.</li>
+                            <li>Website development and functionality.</li>
+                            <li>Database design, implementation and integration.</li>
+                        </ul>
+                        <div class="cta-row">
+                            <a href="https://asociacionalmasbellas.com/" target="_blank" rel="noopener noreferrer" class="btn-arcade btn-icon">
+                                <i class="btn-icon fa-solid fa-globe" aria-hidden="true"></i>
+                                VISIT WEBSITE
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="site-footer" class="footer-arcade"></footer>
+    <script src="../assets/js/components.js"></script>
+    <script>loadFooter();</script>
+</body>
+</html>
